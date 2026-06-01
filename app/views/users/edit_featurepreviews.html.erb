@@ -89,7 +89,7 @@
             classes: ["feature-weekly-receipt-email", "feature-generic"],
             fully_shipped: true,
             name: "Receipt Report",
-            description: "Opting into this preview will send you a weekly reminder with a list of all your missing receipts.",
+            description: "Get a regular email reminder with a list of all your missing receipts. You can choose daily, weekly, or monthly frequency in your #{link_to "Notification settings", "/my/settings/notifications"}.".html_safe,
             footer: "Try #{link_to "triggering an email for yourself", trigger_receipt_report_path, method: :post, data: { turbo: false } }!",
             user: @user
           } %>

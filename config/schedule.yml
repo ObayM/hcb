@@ -107,9 +107,17 @@ fee_engine_hourly_job:
   cron: "0 */1 * * *" # run every 1 hours
   class: "FeeEngine::HourlyJob"
 
+receipt_report_daily_job:
+  cron: "0 0 * * *" # run daily
+  class: "ReceiptReport::DailyJob"
+
 receipt_report_weekly_job:
   cron: "0 0 * * MON" # run first day of each week
   class: "ReceiptReport::WeeklyJob"
+
+receipt_report_monthly_job:
+  cron: "0 0 1 * *" # run first day of each month
+  class: "ReceiptReport::MonthlyJob"
 
 column_reporting_monthly_job:
   cron: "0 0 1 * *" # run first day of each month

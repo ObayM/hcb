@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_05_24_221911) do
+ActiveRecord::Schema[8.0].define(version: 2026_06_01_000211) do
   create_schema "google_sheets"
 
   # These are extensions that must be enabled in order to support this database
@@ -2675,7 +2675,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_05_24_221911) do
     t.boolean "phone_number_verified", default: false
     t.string "preferred_name"
     t.boolean "pretend_is_not_admin", default: false, null: false
-    t.integer "receipt_report_option", default: 0, null: false
+    t.integer "receipt_report_option", default: 1, null: false
     t.boolean "running_balance_enabled", default: false, null: false
     t.boolean "seasonal_themes_enabled", default: true, null: false
     t.integer "session_validity_preference", default: 259200, null: false

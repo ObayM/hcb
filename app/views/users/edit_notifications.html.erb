@@ -59,6 +59,34 @@
         </div>
       </fieldset>
       <fieldset class="field">
+        <legend class="font-medium">Missing receipt reminders</legend>
+        <p class="h5 muted mt-0 mb-3">
+          Get a regular email reminder with a list of all your missing receipts.
+        </p>
+        <div class="field field--options max-w-3xl grid grid--narrow">
+          <%= form.radio_button :receipt_report_option, :daily, disabled: %>
+          <%= form.label :receipt_report_option, value: :daily do %>
+            <%= inline_icon "notification", size: 28 %>
+            <strong>Daily</strong>
+          <% end %>
+          <%= form.radio_button :receipt_report_option, :weekly, disabled: %>
+          <%= form.label :receipt_report_option, value: :weekly do %>
+            <%= inline_icon "email", size: 28 %>
+            <strong>Weekly</strong>
+          <% end %>
+          <%= form.radio_button :receipt_report_option, :monthly, disabled: %>
+          <%= form.label :receipt_report_option, value: :monthly do %>
+            <%= inline_icon "clock", size: 28 %>
+            <strong>Monthly</strong>
+          <% end %>
+          <%= form.radio_button :receipt_report_option, :none, disabled: %>
+          <%= form.label :receipt_report_option, value: :none do %>
+            <%= inline_icon "forbidden", size: 28 %>
+            <strong>None</strong>
+          <% end %>
+        </div>
+      </fieldset>
+      <fieldset class="field">
         <legend class="font-medium">Monthly summaries</legend>
         <p class="h5 muted mt-0 mb-3">
           Get a regular email roundup of activity in your organizations.
